@@ -1,0 +1,20 @@
+{
+    "name": "chitanda/tribone-api",
+    "description": "api for tribone react project",
+    "type": "project",
+    "license": "PENS",
+    "autoload": {
+        "psr-4": {
+            "Chitanda\\TriboneApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "shinyxn",
+            "email": "shinkakurayami1922@gmail.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^6.9"
+    }
+}
