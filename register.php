@@ -59,6 +59,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') :
     $query = mysqli_query($conn, $sql);
     $row_num = mysqli_num_rows($query);
     if ($row_num > 0) jsonHandler(422, 'Nama sudah terdaftar');
+    $sql = "SELECT `email` FROM `users` WHERE `email`='$email'";
+    $query = mysqli_query($conn, $sql);
+    $row_num = mysqli_num_rows($query);
+    if ($row_num > 0) jsonHandler(422, 'email sudah terdaftar');
 
     $sql = "INSERT INTO `users`(`nrp`, `nama`,`email`,`password`) VALUES('$nrp', '$nama','$email','$hash_password')";
     $query = mysqli_query($conn, $sql);
