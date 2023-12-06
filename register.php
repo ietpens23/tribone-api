@@ -50,8 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') :
     elseif (strlen($password) < 8) :
         jsonHandler(422, 'Password kurang dari 8 karakter');
 
-    // elseif (strlen($nama) < 4) :
-    //     jsonHandler(422, 'Nama terlalu pendek');
+      jsonHandler(422, 'Nama terlalu pendek');
 
     endif;
 
